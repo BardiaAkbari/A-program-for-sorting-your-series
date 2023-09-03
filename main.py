@@ -56,8 +56,7 @@ def makeDirections(serialName, season, episode, path, filePath):
     if not os.path.isdir(targetPath):
         os.mkdir(targetPath)
 
-    shutil.move(path + filePath, targetPath + filePath)
-    os.remove(path + filePath)
+    shutil.move(path + "\\" + filePath, targetPath)
 
 
         
