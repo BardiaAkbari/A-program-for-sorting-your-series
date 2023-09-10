@@ -1,1 +1,2 @@
-import logo_qrc
+    def myProgram(self):
+        pass

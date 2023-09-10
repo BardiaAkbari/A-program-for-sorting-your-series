@@ -6,46 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>754</width>
-    <height>471</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label1">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>100</y>
-      <width>61</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Zar</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="autoFillBackground">
-     <bool>true</bool>
-    </property>
-    <property name="text">
-     <string>From:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>170</y>
+      <x>140</x>
+      <y>310</y>
       <width>61</width>
       <height>21</height>
      </rect>
@@ -68,31 +41,11 @@
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>100</y>
-      <width>281</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>292</x>
-      <y>170</y>
-      <width>281</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Browse1">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>100</y>
+      <x>510</x>
+      <y>240</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -108,11 +61,48 @@
      <string>Browse</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>240</y>
+      <width>281</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>240</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Zar</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>From:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
    <widget class="QPushButton" name="Browse2">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>170</y>
+      <x>510</x>
+      <y>310</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -126,11 +116,21 @@
      <string>Browse</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>202</x>
+      <y>310</y>
+      <width>281</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QPushButton" name="Request">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>320</y>
+      <x>300</x>
+      <y>460</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -147,33 +147,42 @@
      <string>Request</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>181</width>
-      <height>441</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/newPrefix/00d79088-b73b-4a9f-8a2b-7683b9d2342d.jfif);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="logo.qrc">:/newPrefix/00d79088-b73b-4a9f-8a2b-7683b9d2342d.jfif</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="logo.qrc"/>
- </resources>
- <connections/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Browse1</sender>
+   <signal>clicked()</signal>
+   <receiver>Browse1</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>556</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Browse2</sender>
+   <signal>clicked()</signal>
+   <receiver>Browse2</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>556</x>
+     <y>323</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
