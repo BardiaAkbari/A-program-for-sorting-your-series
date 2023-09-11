@@ -17,11 +17,11 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(763, 492)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(140, 310, 61, 21))
+        self.label_2.setGeometry(QtCore.QRect(250, 210, 61, 21))
         font = QtGui.QFont()
         font.setFamily("Zar")
         font.setPointSize(10)
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_2.setObjectName("label_2")
         self.Browse1 = QtWidgets.QPushButton(self.centralwidget)
-        self.Browse1.setGeometry(QtCore.QRect(510, 240, 93, 28))
+        self.Browse1.setGeometry(QtCore.QRect(620, 140, 93, 28))
         font = QtGui.QFont()
         font.setPointSize(9)
         font.setBold(False)
@@ -40,10 +40,10 @@ class Ui_MainWindow(object):
         self.Browse1.setFont(font)
         self.Browse1.setObjectName("Browse1")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(200, 240, 281, 22))
+        self.lineEdit.setGeometry(QtCore.QRect(310, 140, 281, 22))
         self.lineEdit.setObjectName("lineEdit")
         self.label1 = QtWidgets.QLabel(self.centralwidget)
-        self.label1.setGeometry(QtCore.QRect(140, 240, 61, 21))
+        self.label1.setGeometry(QtCore.QRect(250, 140, 61, 21))
         font = QtGui.QFont()
         font.setFamily("Zar")
         font.setPointSize(10)
@@ -54,16 +54,16 @@ class Ui_MainWindow(object):
         self.label1.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label1.setObjectName("label1")
         self.Browse2 = QtWidgets.QPushButton(self.centralwidget)
-        self.Browse2.setGeometry(QtCore.QRect(510, 310, 93, 28))
+        self.Browse2.setGeometry(QtCore.QRect(620, 210, 93, 28))
         font = QtGui.QFont()
         font.setPointSize(9)
         self.Browse2.setFont(font)
         self.Browse2.setObjectName("Browse2")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(202, 310, 281, 22))
+        self.lineEdit_2.setGeometry(QtCore.QRect(312, 210, 281, 22))
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.Request = QtWidgets.QPushButton(self.centralwidget)
-        self.Request.setGeometry(QtCore.QRect(300, 460, 141, 51))
+        self.Request.setGeometry(QtCore.QRect(390, 340, 141, 51))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
@@ -71,35 +71,35 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.Request.setFont(font)
         self.Request.setObjectName("Request")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(10, 10, 221, 471))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("Logo.jpg"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-
+        # My changes
         self.retranslateUi(MainWindow)
-        
         self.Browse1.clicked.connect(self.browseFilesForBrowse1)
-
         self.Browse2.clicked.connect(self.browseFilesForBrowse2) 
-
         self.Request.clicked.connect(self.myProgram)
-
+        # End chnages
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def browseFilesForBrowse1(self):
 
         fname = QFileDialog.getExistingDirectory()
         self.lineEdit.setText(fname)
-        print(self.lineEdit.text())
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def browseFilesForBrowse2(self):
         
         fname = QFileDialog.getExistingDirectory()
-
         self.lineEdit_2.setText(fname)
-        print(self.lineEdit_2.text())
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 

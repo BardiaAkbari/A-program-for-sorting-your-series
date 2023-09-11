@@ -44,7 +44,7 @@ def detectDirection(names, path, actualName, destenation):
 def makeDirections(serialName, season, episode, path, actualName, destenation):
 
     targetPath = destenation + "\\" + serialName + "\\" + season + "\\" + episode
-    if not os.path.isdir(destenation + serialName):
+    if not os.path.isdir(destenation+ "\\" + serialName):
         os.mkdir(destenation + "\\" + serialName)
     if not os.path.isdir(destenation + "\\" + serialName + "\\" + season):
         os.mkdir(destenation +"\\"  + serialName + "\\" + season)
