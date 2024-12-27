@@ -7,7 +7,7 @@ import shutil
 def searchInSpeceficDirectory(files):
     whole = [[], []]
     for file in files:
-        name = re.findall("[\S]+S[\d]+E[\d]+", file)
+        name = re.findall("[\S]+S[\d]+\.?E[\d]+", file)
         if len(name) > 0:
             whole[0].append(name[0])
             whole[1].append(file)
